@@ -1,0 +1,40 @@
+@use "../abstracts";
+
+
+.slide__header {
+	display: flex;
+	justify-content: space-between;
+}
+
+.slide__title {
+	font-size: 2.5rem;
+}
+
+.slide__subtitle {
+	font-size: 1.5rem;
+	margin-bottom: .5em;
+}
+
+.slide__navigation {
+	color: #fff;
+	font-size: 1.2rem;
+	cursor: pointer;
+	padding: 5px;
+	transition: .1s;
+
+	&:hover{
+		transform: scale(1.2);
+	}
+}
+
+
+.slide__button {
+	padding: 1em;
+	position: relative;
+	overflow: hidden;
+
+	color: #fff;
+	cursor: pointer;
+
+	@extend %glass;
+}

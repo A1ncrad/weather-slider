@@ -1,0 +1,7 @@
+@use "colors";
+
+%glass {
+	backdrop-filter: blur(10px);
+	background-color: colors.$glass-color;
+	border-radius: 10px;
+}

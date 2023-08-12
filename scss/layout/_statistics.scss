@@ -1,0 +1,21 @@
+@use "../abstracts";
+
+
+.statistics {
+	display: grid;
+	grid-template-columns: repeat(7, 1fr);
+	place-items: center;
+	text-align: center;
+	padding: 2em;
+
+	@extend %glass;
+
+	&__icon {
+		font-size: 3rem;
+	}
+
+	&__text {
+		margin-top: .5em;
+		font-size: 1.8rem;
+	}
+}
