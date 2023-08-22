@@ -7,11 +7,13 @@
 }
 
 .slide__title {
-	font-size: 2.5rem;
+	max-width: 50vw;
+	word-wrap: break-word;
+	font-size: clamp(1.8rem, 2.2rem, 5vw);
 }
 
 .slide__subtitle {
-	font-size: 1.5rem;
+	font-size: clamp(1.2rem, 1.5rem, 3vw);
 	margin-bottom: .5em;
 }
 
@@ -36,5 +38,14 @@
 	color: #fff;
 	cursor: pointer;
 
+	font-size: clamp(.5rem, 14px, 1rem);
+
 	@extend %glass;
+}
+
+
+@media (max-width: 992px) {
+	.slide__navigation {
+		display: none;
+	}
 }

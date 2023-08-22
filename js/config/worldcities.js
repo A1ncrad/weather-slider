@@ -1,4 +1,4 @@
-export const cities = [
+export default [
  {
    "city": "Tokyo",
    "lat": 35.6897,

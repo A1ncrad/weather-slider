@@ -2,10 +2,10 @@
 
 
 .search {
-	padding-top: 7em;
+	padding-top: var(--slide-padding);
 
 	&__form {
-		width: 40vw;
+		width: min(600px, 90%);
 		overflow: hidden;
 		margin: 0 auto;
 		

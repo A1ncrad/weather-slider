@@ -27,7 +27,7 @@ export default function (city, country, weather) {
 		const temperature = Math.round(weather.temperature_2m_max[i]);
 
 		const tile = document.createElement("section");
-		tile.className = "statisctics__tile";
+		tile.className = "statistics__tile";
 		statistics.append(tile);
 
 		const icon = document.createElement("span");

@@ -6,16 +6,37 @@
 	grid-template-columns: repeat(7, 1fr);
 	place-items: center;
 	text-align: center;
-	padding: 2em;
+	padding: 2em 0;
 
 	@extend %glass;
 
 	&__icon {
-		font-size: 3rem;
+		font-size: clamp(1.8rem, 2.5rem, 10vw);
 	}
 
 	&__text {
 		margin-top: .5em;
-		font-size: 1.8rem;
+		font-size: clamp(1.2rem, 2rem, 5vw);
 	}
 }
+
+
+@media (max-width: 998px){
+	.statistics {
+		margin: calc(var(--slide-padding) * -1);
+		border-radius: 10px 10px 0 0;
+	}
+}
+
+@media (max-width: 770px){
+	.statistics {
+		padding: 2em 1em;
+	}
+}
+
+@media (max-width: 650px) {
+	.statistics {
+		padding: 1em 1em .5em;
+	}
+}
+
