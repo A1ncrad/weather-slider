@@ -1,6 +1,5 @@
 import * as navigation from "../navigation.js";
 
-const slider = document.querySelector(".slider");
 
 document.addEventListener("click", e => {
 	if (e.target.closest(".slide__navigation--next")) navigation.nextSlide();
@@ -8,18 +7,30 @@ document.addEventListener("click", e => {
 });
 
 
+const slider = document.querySelector(".slider");
 let startY;
 let currentY;
 
-document.addEventListener("touchstart", e => {
+
+slider.addEventListener("touchstart", e => {
 	startY = e.touches[0].clientY;
 });
 
-document.addEventListener("touchmove", e => {
+
+slider.addEventListener("touchmove", e => {
 	currentY = e.touches[0].clientY;
 });
 
-document.addEventListener("touchend", () => {
+
+slider.addEventListener("touchcancel", () => {
+	currentY = undefined;
+});
+
+
+slider.addEventListener("touchend", () => {
 	if (startY - currentY > 20) navigation.nextSlide();
 	if (startY - currentY < 20) navigation.prevSlide();
+
+	currentY = undefined;
 });
+

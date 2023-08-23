@@ -136,11 +136,15 @@ body {
   }
 }
 .statistics {
-  display: grid;
-  grid-template-columns: repeat(7, 1fr);
-  place-items: center;
+  overflow: auto;
+  display: flex;
+  justify-content: space-between;
   text-align: center;
-  padding: 2em 0;
+  gap: 1em;
+  padding: 2em 3em;
+}
+.statistics__tile {
+  flex: 0 0 min(100px, 25%);
 }
 .statistics__icon {
   font-size: clamp(1.8rem, 2.5rem, 10vw);
@@ -150,20 +154,14 @@ body {
   font-size: clamp(1.2rem, 2rem, 5vw);
 }
 
-@media (max-width: 998px) {
-  .statistics {
-    margin: calc(var(--slide-padding) * -1);
-    border-radius: 10px 10px 0 0;
-  }
-}
 @media (max-width: 770px) {
   .statistics {
-    padding: 2em 1em;
+    padding: 2em;
   }
 }
 @media (max-width: 650px) {
   .statistics {
-    padding: 1em 1em 0.5em;
+    padding: 1em;
   }
 }
 .search {
