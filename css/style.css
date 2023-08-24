@@ -27,7 +27,7 @@ ul, ol {
 
 body {
   font-family: Arial, Helvetica, sans-serif;
-  height: var(--vh, 100vh);
+  height: var(--vh);
   overflow: hidden;
 }
 
@@ -37,7 +37,7 @@ body {
 }
 .slider__item {
   flex: 1 0 100vw;
-  height: var(--vh, 100vh);
+  height: var(--vh);
 }
 
 .slide {
@@ -68,7 +68,7 @@ body {
     flex-direction: column;
   }
   .slider__item {
-    flex: 0 1 var(--vh, 100vh);
+    flex: 0 1 var(--vh);
   }
 }
 @media (max-width: 700px) {
