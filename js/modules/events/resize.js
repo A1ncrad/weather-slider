@@ -1,5 +1,5 @@
 function setViewportHeight() {
-	const vh = document.documentElement.clientHeight;
+	const vh = window.innerHeight;
 	document.documentElement.style.setProperty("--vh", vh);
 }
 
