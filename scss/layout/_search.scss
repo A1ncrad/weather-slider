@@ -20,10 +20,14 @@
 		border: none;
 
 
-		font-size: 1.2rem;
+		font-size: clamp(1rem, 1.2rem, 5vw);
 		padding: 1em;
 		color: #fff;
 		font-family: inherit;
+
+		&::placeholder {
+			color: darken(#fff, 30%);
+		}
 	}
 }
 
@@ -38,7 +42,7 @@
 
 	li {
 		color: #ddd;
-		font-size: 1rem;
+		font-size: clamp(.8rem, 1rem, 4vw);
 		padding: 1em;
 		border-top: 1px solid abstracts.$glass-color;
 		transition: .3s;

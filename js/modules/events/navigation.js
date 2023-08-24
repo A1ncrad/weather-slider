@@ -14,11 +14,13 @@ let currentY;
 
 slider.addEventListener("touchstart", e => {
 	startY = e.touches[0].clientY;
+	startX = e.touches[0].clientX;
 });
 
 
 slider.addEventListener("touchmove", e => {
 	currentY = e.touches[0].clientY;
+	currentX = e.touches[0].clientX;
 });
 
 
@@ -28,8 +30,8 @@ slider.addEventListener("touchcancel", () => {
 
 
 slider.addEventListener("touchend", () => {
-	if (startY - currentY > 20) navigation.nextSlide();
-	if (startY - currentY < 20) navigation.prevSlide();
+	if (startY - currentY > 50) navigation.nextSlide();
+	if (currentY - startY > 50) navigation.prevSlide();
 
 	currentY = undefined;
 });

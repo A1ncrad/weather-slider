@@ -7,13 +7,15 @@
 }
 
 .slide__title {
-	max-width: 50vw;
+	max-width: 45vw;
 	word-wrap: break-word;
-	font-size: clamp(1.8rem, 2.2rem, 5vw);
+	font-size: clamp(1.6rem, 2.2rem, 5vw);
 }
 
 .slide__subtitle {
-	font-size: clamp(1.2rem, 1.5rem, 3vw);
+	max-width: 45vw;
+	word-wrap: break-word;
+	font-size: clamp(1rem, 1.5rem, 3vw);
 	margin-bottom: .5em;
 }
 
@@ -24,7 +26,7 @@
 	padding: 5px;
 	transition: .1s;
 
-	&:hover{
+	&:hover {
 		transform: scale(1.2);
 	}
 }
@@ -38,7 +40,7 @@
 	color: #fff;
 	cursor: pointer;
 
-	font-size: clamp(.5rem, 14px, 1rem);
+	font-size: min(4vw, 14px);
 
 	@extend %glass;
 }

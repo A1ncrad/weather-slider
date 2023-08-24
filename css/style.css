@@ -27,7 +27,7 @@ ul, ol {
 
 body {
   font-family: Arial, Helvetica, sans-serif;
-  height: 100vh;
+  height: var(--vh, 100vh);
   overflow: hidden;
 }
 
@@ -37,7 +37,7 @@ body {
 }
 .slider__item {
   flex: 1 0 100vw;
-  height: 100vh;
+  height: var(--vh, 100vh);
 }
 
 .slide {
@@ -68,7 +68,7 @@ body {
     flex-direction: column;
   }
   .slider__item {
-    flex: 0 1 100vh;
+    flex: 0 1 var(--vh, 100vh);
   }
 }
 @media (max-width: 700px) {
@@ -79,6 +79,11 @@ body {
 @media (max-width: 500px) {
   :root {
     --slide-padding: 1.5rem;
+  }
+}
+@media (max-width: 400px) {
+  :root {
+    --slide-padding: 1rem;
   }
 }
 .search__form, .statistics, .slide__button {
@@ -100,13 +105,15 @@ body {
 }
 
 .slide__title {
-  max-width: 50vw;
+  max-width: 45vw;
   word-wrap: break-word;
-  font-size: clamp(1.8rem, 2.2rem, 5vw);
+  font-size: clamp(1.6rem, 2.2rem, 5vw);
 }
 
 .slide__subtitle {
-  font-size: clamp(1.2rem, 1.5rem, 3vw);
+  max-width: 45vw;
+  word-wrap: break-word;
+  font-size: clamp(1rem, 1.5rem, 3vw);
   margin-bottom: 0.5em;
 }
 
@@ -127,7 +134,7 @@ body {
   overflow: hidden;
   color: #fff;
   cursor: pointer;
-  font-size: clamp(0.5rem, 14px, 1rem);
+  font-size: min(4vw, 14px);
 }
 
 @media (max-width: 992px) {
@@ -147,11 +154,11 @@ body {
   flex: 0 0 min(100px, 25%);
 }
 .statistics__icon {
-  font-size: clamp(1.8rem, 2.5rem, 10vw);
+  font-size: clamp(1.6rem, 2.5rem, 10vw);
 }
 .statistics__text {
   margin-top: 0.5em;
-  font-size: clamp(1.2rem, 2rem, 5vw);
+  font-size: clamp(1rem, 2rem, 5vw);
 }
 
 @media (max-width: 770px) {
@@ -178,10 +185,13 @@ body {
   background-color: transparent;
   outline: none;
   border: none;
-  font-size: 1.2rem;
+  font-size: clamp(1rem, 1.2rem, 5vw);
   padding: 1em;
   color: #fff;
   font-family: inherit;
+}
+.search__input::placeholder {
+  color: #b3b3b3;
 }
 
 .search__results {
@@ -192,7 +202,7 @@ body {
 }
 .search__results li {
   color: #ddd;
-  font-size: 1rem;
+  font-size: clamp(0.8rem, 1rem, 4vw);
   padding: 1em;
   border-top: 1px solid rgba(255, 255, 255, 0.2);
   transition: 0.3s;

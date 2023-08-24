@@ -3,7 +3,6 @@
 
 .statistics {
 	overflow: auto;
-
 	display: flex;
 	justify-content: space-between;
 	text-align: center;
@@ -17,19 +16,19 @@
 	}
 
 	&__icon {
-		font-size: clamp(1.8rem, 2.5rem, 10vw);
+		font-size: clamp(1.6rem, 2.5rem, 10vw);
 	}
 
 	&__text {
 		margin-top: .5em;
-		font-size: clamp(1.2rem, 2rem, 5vw);
+		font-size: clamp(1rem, 2rem, 5vw);
 	}
 }
 
 
 
 
-@media (max-width: 770px){
+@media (max-width: 770px) {
 	.statistics {
 		padding: 2em;
 	}
@@ -40,4 +39,3 @@
 		padding: 1em;
 	}
 }
-
